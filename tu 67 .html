@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getters setter & instance of oprator in javascript</title>
+    <style>
+        body {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        class animal {
+            constructor(name) {
+                this._name = name;
+            }
+            fly() {
+                console.log("software developer");
+            }
+            get name() {
+                return this._name
+            }
+            set name(newName) {
+                this._name = newName
+            }
+        }
+
+        class rabit extends animal{
+            eatcarrot(){
+                console.log("eating carrot ");
+            }
+        }
+
+        let a = new rabit('bruno')
+        a.fly()
+        console.log(a.name);
+        a.name = "jack"
+        console.log(a.name);
+
+        let c = 45;
+
+        console.log(a instanceof animal); // inharriting class ans is true  
+        console.log(a instanceof rabit); 
+        console.log(c instanceof animal);
+    </script>
+</body>
+
+</html>
